@@ -11,7 +11,7 @@ Software Process in Software Engineering. Investigates core process activities, 
 
 ## Presentation & Media Deliverables
 
-* 📄 **[View Presentation Slides](./Introduction_to_Software_Engineering.pptx)**
+* 📄 **[View Presentation Slides](./Software_Process_in_Software_Engineering.pptx)**
 
 ---
 
