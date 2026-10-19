@@ -70,3 +70,58 @@ Consider developing a **Mobile Banking Application**:
 * **Appropriate Projects:** Startup products, SaaS applications, mobile platforms, and competitive consumer markets.
 
 ---
+
+## Part 3 – Waterfall Model
+
+### 1. Major Phases of the Waterfall Model
+* **Requirements Definition:** System goals, services, and operational constraints are established through consultation with stakeholders and documented in detail.
+* **System and Software Design:** Establishes the overall system architecture and defines software abstractions and relationships.
+* **Implementation and Unit Testing:** Software design is realized as a set of programs or units, which are individually tested against specifications.
+* **Integration and System Testing:** Individual units are integrated and tested as a complete system to ensure software requirements are met.
+* **Operation and Maintenance:** The system is deployed and put into practical use. Maintenance involves fixing bugs, improving implementation, and enhancing system services as new requirements emerge.
+![Waterfall Process Model](./Images/Water_Fall_Model.jpg)
+
+### 2. Why Waterfall is Plan-Driven
+Waterfall is categorized as a plan-driven process because all activities (schedule, requirements, and system architecture) are explicitly planned and documented upfront before implementation begins. Progress is measured directly against the formal project plan.
+
+### 3. Role of Documentation and Phase Completion
+Because different teams often handle sequential phases, detailed documentation serves as the main communication bridge. Formally completing and signing off on each phase ensures requirements and architecture are fully validated before committing resources to downstream development.
+
+### 4. Impact of Requirements Changes Mid-Development
+If requirements change after development has started, previous phases must be reopened and reworked (e.g., re-architecting, re-writing code, and re-executing unit tests). This makes mid-development changes extremely costly and disruptive to project timelines.
+
+---
+
+## Part 4 – Incremental Development
+
+### 1. Concept of Incremental Development
+Incremental development breaks down software into manageable versions (increments), where each increment delivers a specific subset of complete system functionality.
+
+### 2. Interleaving of Process Activities
+Unlike Waterfall's distinct linear stages, specification, design, implementation, and testing activities are conducted concurrently during each increment. Requirements for upcoming increments are refined while current increments are actively being developed.
+
+### 3. Importance of Customer Feedback
+Customers receive early releases of working software and provide feedback based on actual usage rather than static spec documents. This direct feedback guides feature priorities for subsequent increments.
+
+### 4. Cost Reduction for Requirements Changes
+Because increments are small and modular, changes in requirements affect only current or future increments. This drastically reduces the total volume of code that must be rewritten compared to modifying a monolithic Waterfall build.
+
+![Incremental Development Model](./Images/Incremental_Development_Model.jpg)
+
+---
+
+## Part 5 – Integration and Configuration
+
+### 1. Reuse-Based Software Development
+Modern software development frequently relies on integrating pre-built software components, off-the-shelf packages, and framework APIs rather than writing every module from scratch.
+
+### 2. Process Stages in Component Reuse
+1. **Requirements Specification:** Initial high-level requirements are defined.
+2. **Software Discovery & Evaluation:** Developers search repositories for components matching system needs.
+3. **Requirements Refinement:** Original requirements are modified to align with available component capabilities.
+4. **Configuration / Adaptation:** Components are configured and parameterized for the target system.
+5. **Integration:** Components and custom glue code are integrated into a single operating architecture.
+
+### 3. Advantages and Limitations
+* **Advantage:** Accelerates time-to-market, reduces development effort, and leverages pre-tested, reliable code.
+* **Limitation:** Loss of control over system evolution. Third-party vendor updates or deprecated APIs can force unexpected system refactoring.
