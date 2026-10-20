@@ -1,5 +1,6 @@
 **Course:** Software Engineering I  
 **Author:** Yino Alva
+**Semester:** Fall 2026
 **Instructor:** Dr. Victor Govindaswamy  
 
 ---
@@ -8,7 +9,8 @@ https://youtu.be/zG_2VjeATvY?si=o_Vs9oikju10-G0Z
 https://youtu.be/h9rMgdPAUWw?si=GdnY4hquEvIoOyUr
 https://youtu.be/JIROyfUgI2k?si=AnzQYFBKq8bIq9gh
 --- 
-
+💼 **LinkedIn Post:** [View Promotional Post on LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7518171391901237249/)
+---
 # Software-Process-in-Software-Engineering
 Software Process in Software Engineering. Investigates core process activities, software process models (Waterfall, Incremental, Component Reuse, Agile), and real-world industrial practices comparing Netflix and NASA SLS. Includes technical documentation and presentation slides.
 
