@@ -125,3 +125,133 @@ Modern software development frequently relies on integrating pre-built software 
 ### 3. Advantages and Limitations
 * **Advantage:** Accelerates time-to-market, reduces development effort, and leverages pre-tested, reliable code.
 * **Limitation:** Loss of control over system evolution. Third-party vendor updates or deprecated APIs can force unexpected system refactoring.
+
+## Part 6 – Software Process Activities
+
+### 1. Software Specification / Requirements Engineering
+* **Role:** Establishes the boundary conditions, capabilities, and system constraints.
+* **Contribution:** Prevents teams from building the wrong system by aligning technical output with stakeholder needs.
+
+### 2. Software Design and Implementation
+* **Role:** Transforms system specifications into an operational software executable.
+* **Contribution:** Software design structures the internal system architecture, database models, and interface definitions, while implementation writes clean, maintainable code.
+
+### 3. Software Validation
+* **Role:** Evaluates software via unit testing, integration testing, system testing, and user-acceptance testing (UAT).
+* **Contribution:** Ensures that the software operates accurately, satisfies security requirements, and meets specified expectations before deployment.
+
+### 4. Software Evolution
+* **Role:** Updates, patches, and refactors software in response to changing environments, bug discoveries, and user requests.
+* **Contribution:** Software is dynamic; evolution ensures that software remains useful, secure, and operational over its commercial lifecycle.
+
+---
+
+## Part 7 – Coping with Change
+
+### 1. Inevitability of Change in Software Projects
+Software operates within dynamic business, technical, and human environments. Changes arise from shifting market demands, evolving consumer preferences, corporate restructuring, regulatory updates, hardware changes, and newly discovered security vulnerabilities.
+
+### 2. Software Prototyping
+A prototype is an initial version of a software system used to demonstrate concepts, evaluate design options, and discover requirements.
+* **Clarifying Requirements:** Users test prototypes to discover missing features or clarify ambiguous specifications early in development.
+* **Evaluating Design Decisions:** Architects use prototypes to test performance bottleneck issues or evaluate different UI/UX layouts.
+
+### 3. Incremental Delivery
+Incremental delivery supplies working software functionality directly to end-users in successive releases.
+* **Early Customer Value:** Customers receive functional software sooner, allowing them to gain business value early rather than waiting years for a full release.
+* **Impact of Change:** Managing change iteratively isolates cost, schedule, testing, and documentation impacts to specific increments rather than destabilizing the entire software platform.
+
+---
+
+## Part 8 – Two Real-World Software Engineering Applications
+
+### Application 1: E-Commerce Platform (Shopify)
+* **Company & System:** Shopify Inc. — Global E-Commerce Merchant Infrastructure
+* **System Function:** Processes storefront browsing, payment gateway checkouts, real-time inventory tracking, and order fulfillment across 2M+ online stores.
+* **Development Approach:** Agile / Continuous Delivery / Microservices
+* **Process Mapping:**
+  * **Specification:** Dynamic product backlog driven by merchant usage analytics & A/B testing.
+  * **Design & Implementation:** API-first microservices architecture and extensive third-party API integration (Stripe, PayPal, shipping carriers).
+  * **Validation:** Automated CI/CD pipelines, unit testing suites, and canary deployments.
+  * **Evolution:** Continuous daily cloud releases without causing storefront downtime.
+* **Process Flow:**
+  `Merchant Feedback -> Agile Backlog -> Microservice Coding -> Automated CI/CD Testing -> Continuous Deployment -> Live Telemetry`
+
+---
+
+### Application 2: Healthcare Software (Epic Systems)
+* **Company & System:** Epic Systems Corporation — EpicCare Electronic Health Record (EHR)
+* **System Function:** Manages electronic patient records, clinical notes, prescription orders, and hospital workflows across healthcare networks.
+* **Development Approach:** Plan-Driven / Safety-Critical Hybrid
+* **Process Mapping:**
+  * **Specification:** Exhaustive upfront specifications driven by regulatory standards (HIPAA, FDA) and clinical safety protocols.
+  * **Design & Implementation:** Modular clinical architecture with strict role-based access control security models.
+  * **Validation:** Months of multi-tier clinical simulation, security audits, and formal verification before code freeze.
+  * **Evolution:** Scheduled quarterly/annual institutional releases managed by hospital Change Control Boards (CCB).
+* **Process Flow:**
+  `Regulatory/Safety Specs -> Formal Architecture -> Secure Module Coding -> Clinical Simulation & Audits -> Scheduled Institutional Rollout`
+
+---
+
+## Part 9 – 14-Category Comparative Matrix
+
+| Category | Application 1 (Shopify) | Application 2 (Epic Systems) |
+| :--- | :--- | :--- |
+| **Company/Organization** | Shopify Inc. | Epic Systems Corporation |
+| **Software/Application** | Shopify E-Commerce Storefront Infrastructure | EpicCare Electronic Health Record (EHR) System |
+| **Primary Users** | Online merchants, store managers, and global shoppers | Doctors, nurses, pharmacists, and medical staff |
+| **Development Approach** | Agile / Continuous Delivery / Microservices Architecture | Plan-Driven / Safety-Critical Waterfall Hybrid |
+| **Requirements Process** | Dynamic product backlog driven by merchant usage analytics & A/B testing | Formal upfront specifications based on HIPAA rules & FDA regulations |
+| **Development** | API-first microservices & pre-built third-party component integration | Modular clinical data engine with strict role-based access control |
+| **Testing/Validation** | Automated CI/CD pipelines, unit suites, and canary deployments | Multi-tier clinical simulation, data integrity testing & HIPAA audits |
+| **Deployment** | Continuous deployment (multiple updates pushed live per day) | Scheduled institutional release cycles (quarterly or annual updates) |
+| **Maintenance/Updates** | Real-time cloud background updates without storefront downtime | Institutional patches governed by Change Control Board (CCB) oversight |
+| **Customer Feedback** | Real-time site telemetry, merchant analytics, and live experimentation | Clinical advisory boards, hospital system feedback, and audit reports |
+| **Waterfall Characteristics** | Core payment security baselines & financial data compliance rules | Sequential phase gates, exhaustive documentation, and signed-off specs |
+| **Agile/Incremental Characteristics** | Rapid storefront feature updates and short sprint releases | Internal iterative engineering sprints prior to formal release freezes |
+| **Major Advantage of Approach** | Rapid time-to-market and continuous scaling for merchants | Uncompromising patient safety, zero fault tolerance & regulatory compliance |
+| **Major Challenge** | Handling massive real-time traffic spikes (e.g., Black Friday sales) | High cost, extreme complexity, and risk of modifying baseline core code |
+
+---
+
+## Part 10 – Advantages, Disadvantages, and Appropriate Use
+
+### 1. Advantages of the Waterfall Model
+* **Predictability & Structure:** Clear project milestones, rigid phase gates, and unambiguous deliverables.
+* **Thorough Documentation:** Comprehensive design records ensure system knowledge is preserved across teams.
+* **Easier Project Control:** Managers can easily track progress against predefined plans and budgets.
+
+### 2. Disadvantages of the Waterfall Model
+* **Inflexible to Change:** Requirements changes mid-project require costly rework across completed phases.
+* **Late Working Software:** End-users do not see functional software until late in the development lifecycle.
+* **Risk of Unmet User Needs:** Misunderstandings in initial requirements are often discovered late during final testing.
+
+### 3. When Waterfall is Appropriate
+Waterfall is appropriate for **safety-critical and highly regulated systems** (e.g., healthcare EHRs, medical devices, aerospace control, banking ledgers) where requirements are fixed, safety is paramount, and auditability is legally required.
+
+### 4. When Incremental / Agile is Appropriate
+Incremental/Agile is appropriate for **commercial web and mobile platforms** (e.g., e-commerce, consumer apps, SaaS tools) operating in dynamic markets where customer requirements evolve rapidly and speed-to-market is a competitive advantage.
+
+### 5. Why Large Projects Use Hybrid Process Models
+Large systems often consist of diverse subsystems with different risk profiles. For example, a healthcare platform uses a **plan-driven approach** for storing sensitive patient data to ensure HIPAA compliance, while using an **agile approach** for developing the patient-facing mobile scheduling app. Hybrid models allow organizations to balance regulatory compliance with user flexibility.
+
+---
+
+## Part 11 – What Did You Learn?
+
+* **No "One-Size-Fits-All" Process:** Software engineering processes must be tailored to the system's specific domain, risk profile, and target audience.
+* **Safety & Regulation Drive Plan-Driven Processes:** Systems where errors risk patient safety or legal non-compliance rely on structured, documented phases.
+* **Market Competition Drives Agile Processes:** Systems where customer expectations change quickly rely on iterative updates and continuous feedback.
+
+---
+
+## References
+
+1. **Govindaswamy, V.** *Software Engineering Lecture 1: Basics of Software Engineering Parts 1–3*. Course Presentation Slides.
+2. **Govindaswamy, V.** *Software Engineering Lecture 2: Software Processes Parts 1–2*. Course Presentation Slides.
+3. **Shopify Engineering.** *How Shopify Delivers Software at Scale: Continuous Delivery & Microservices*. Shopify Tech Blog. Available at: [https://engineering.shopify.com](https://engineering.shopify.com)
+4. **Shopify Engineering.** *Continuous Modernization & Infrastructure Scale for Enterprise Commerce*. Shopify Tech Blog, 2026. Available at: [https://www.shopify.com/enterprise/blog/continuous-modernization](https://www.shopify.com/enterprise/blog/continuous-modernization)
+5. **Shopify Engineering.** *IT Transformation & Continuous Feature Delivery Benchmarks*. Shopify Tech Blog, 2026. Available at: [https://www.shopify.com/enterprise/blog/it-transformation](https://www.shopify.com/enterprise/blog/it-transformation)
+6. **Epic Systems Corporation.** *Safety-Critical System Validation and Healthcare Compliance Standards*. Epic Technical Documentation. Available at: [https://www.epic.com](https://www.epic.com)
+7. **Epic Systems Corporation.** *Epic EHR Security Features & Healthcare Regulatory Compliance Standards*. Digital Health Engineering, 2026. Available at: [https://digitalhealth.folio3.com/blog/epic-ehr-security-features/](https://digitalhealth.folio3.com/blog/epic-ehr-security-features/)
+8. **Accountable HQ.** *Epic HIPAA Compliance: Administrative, Technical Controls, and Change Oversight*. Security & Compliance Guide, 2026. Available at: [https://www.accountablehq.com/post/epic-hipaa-compliance-requirements-security-features-and-best-practices](https://www.accountablehq.com/post/epic-hipaa-compliance-requirements-security-features-and-best-practices)
