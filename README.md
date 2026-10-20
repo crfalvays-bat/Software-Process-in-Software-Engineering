@@ -125,7 +125,8 @@ Modern software development frequently relies on integrating pre-built software 
 ### 3. Advantages and Limitations
 * **Advantage:** Accelerates time-to-market, reduces development effort, and leverages pre-tested, reliable code.
 * **Limitation:** Loss of control over system evolution. Third-party vendor updates or deprecated APIs can force unexpected system refactoring.
-
+  
+---
 ## Part 6 – Software Process Activities
 
 ### 1. Software Specification / Requirements Engineering
@@ -166,30 +167,30 @@ Incremental delivery supplies working software functionality directly to end-use
 ## Part 8 – Two Real-World Software Engineering Applications
 
 ### Application 1: E-Commerce Platform (Shopify)
-* **Company & System:** Shopify Inc. — Global E-Commerce Merchant Infrastructure
-* **System Function:** Processes storefront browsing, payment gateway checkouts, real-time inventory tracking, and order fulfillment across 2M+ online stores.
-* **Development Approach:** Agile / Continuous Delivery / Microservices
-* **Process Mapping:**
-  * **Specification:** Dynamic product backlog driven by merchant usage analytics & A/B testing.
-  * **Design & Implementation:** API-first microservices architecture and extensive third-party API integration (Stripe, PayPal, shipping carriers).
-  * **Validation:** Automated CI/CD pipelines, unit testing suites, and canary deployments.
-  * **Evolution:** Continuous daily cloud releases without causing storefront downtime.
+* **Company & System:** Shopify Inc. — Global E-Commerce Merchant Platform
+* **System Function:** Powers 2M+ online merchant storefronts, handling product catalog navigation, checkout, payment gateways, and inventory tracking.
+* **Development Approach:** Agile / DevOps / Continuous Delivery / Component Reuse
+* **4 Core Process Activities:**
+  * **Specification:** Dynamic backlog prioritized via merchant feedback, A/B testing, and market trends.
+  * **Design & Implementation:** API-first microservices architecture; integrates pre-built third-party components (Stripe, PayPal, carrier shipping APIs).
+  * **Validation:** Automated CI/CD pipelines, unit/integration testing suites, and canary deployments to ensure zero downtime.
+  * **Evolution:** Continuous daily releases to production without interrupting active storefront sales.
 * **Process Flow:**
-  `Merchant Feedback -> Agile Backlog -> Microservice Coding -> Automated CI/CD Testing -> Continuous Deployment -> Live Telemetry`
+  `Merchant Feedback → Agile Backlog → Microservice/API Coding → Automated CI/CD Testing → Continuous Deployment → Live Telemetry`
 
 ---
 
 ### Application 2: Healthcare Software (Epic Systems)
-* **Company & System:** Epic Systems Corporation — EpicCare Electronic Health Record (EHR)
-* **System Function:** Manages electronic patient records, clinical notes, prescription orders, and hospital workflows across healthcare networks.
-* **Development Approach:** Plan-Driven / Safety-Critical Hybrid
-* **Process Mapping:**
+* **Company & System:** Epic Systems Corporation — EpicCare Electronic Health Record (EHR) System
+* **System Function:** Manages electronic patient medical records, physician notes, prescription orders, and clinical workflows across hospital networks.
+* **Development Approach:** Plan-Driven / Safety-Critical Waterfall Hybrid
+* **4 Core Process Activities:**
   * **Specification:** Exhaustive upfront specifications driven by regulatory standards (HIPAA, FDA) and clinical safety protocols.
-  * **Design & Implementation:** Modular clinical architecture with strict role-based access control security models.
+  * **Design & Implementation:** Modular clinical architecture with strict access control security models and data integrity baselines.
   * **Validation:** Months of multi-tier clinical simulation, security audits, and formal verification before code freeze.
-  * **Evolution:** Scheduled quarterly/annual institutional releases managed by hospital Change Control Boards (CCB).
+  * **Evolution:** Scheduled quarterly/annual institutional releases managed by hospital Change Control Boards (CCB) to protect patient safety.
 * **Process Flow:**
-  `Regulatory/Safety Specs -> Formal Architecture -> Secure Module Coding -> Clinical Simulation & Audits -> Scheduled Institutional Rollout`
+  `Regulatory/Safety Specs → Formal Architecture → Secure Module Coding → Clinical Simulation & Audits → Scheduled Institutional Rollout`
 
 ---
 
@@ -200,7 +201,7 @@ Incremental delivery supplies working software functionality directly to end-use
 | **Company/Organization** | Shopify Inc. | Epic Systems Corporation |
 | **Software/Application** | Shopify E-Commerce Storefront Infrastructure | EpicCare Electronic Health Record (EHR) System |
 | **Primary Users** | Online merchants, store managers, and global shoppers | Doctors, nurses, pharmacists, and medical staff |
-| **Development Approach** | Agile / Continuous Delivery / Microservices Architecture | Plan-Driven / Safety-Critical Waterfall Hybrid |
+| **Development Approach** | Agile / DevOps / Microservices Architecture | Plan-Driven / Safety-Critical Waterfall Hybrid |
 | **Requirements Process** | Dynamic product backlog driven by merchant usage analytics & A/B testing | Formal upfront specifications based on HIPAA rules & FDA regulations |
 | **Development** | API-first microservices & pre-built third-party component integration | Modular clinical data engine with strict role-based access control |
 | **Testing/Validation** | Automated CI/CD pipelines, unit suites, and canary deployments | Multi-tier clinical simulation, data integrity testing & HIPAA audits |
@@ -216,28 +217,22 @@ Incremental delivery supplies working software functionality directly to end-use
 
 ## Part 10 – Advantages, Disadvantages, and Appropriate Use
 
-### 1. Advantages of the Waterfall Model
-* **Predictability & Structure:** Clear project milestones, rigid phase gates, and unambiguous deliverables.
-* **Thorough Documentation:** Comprehensive design records ensure system knowledge is preserved across teams.
-* **Easier Project Control:** Managers can easily track progress against predefined plans and budgets.
+### 1. Waterfall Model
+* **Advantages:** Clear project milestones, detailed design documentation, predictable planning.
+* **Disadvantages:** Inflexible to mid-project changes; working software delivered late in the process.
+* **Appropriate Use:** Safety-critical, heavily regulated software (Healthcare EHRs, aerospace flight controls).
 
-### 2. Disadvantages of the Waterfall Model
-* **Inflexible to Change:** Requirements changes mid-project require costly rework across completed phases.
-* **Late Working Software:** End-users do not see functional software until late in the development lifecycle.
-* **Risk of Unmet User Needs:** Misunderstandings in initial requirements are often discovered late during final testing.
+### 2. Incremental / Agile Models
+* **Advantages:** Fast time-to-market, flexible to changing requirements, early user value.
+* **Disadvantages:** Less predictable long-term schedules; requires continuous team coordination.
+* **Appropriate Use:** Dynamic commercial applications (E-commerce storefronts, consumer web/mobile apps).
 
-### 3. When Waterfall is Appropriate
-Waterfall is appropriate for **safety-critical and highly regulated systems** (e.g., healthcare EHRs, medical devices, aerospace control, banking ledgers) where requirements are fixed, safety is paramount, and auditability is legally required.
-
-### 4. When Incremental / Agile is Appropriate
-Incremental/Agile is appropriate for **commercial web and mobile platforms** (e.g., e-commerce, consumer apps, SaaS tools) operating in dynamic markets where customer requirements evolve rapidly and speed-to-market is a competitive advantage.
-
-### 5. Why Large Projects Use Hybrid Process Models
-Large systems often consist of diverse subsystems with different risk profiles. For example, a healthcare platform uses a **plan-driven approach** for storing sensitive patient data to ensure HIPAA compliance, while using an **agile approach** for developing the patient-facing mobile scheduling app. Hybrid models allow organizations to balance regulatory compliance with user flexibility.
+### 3. Why Use Hybrid Models?
+* Allows companies to keep core engines plan-driven for safety/compliance while using agile iterations for user interfaces.
 
 ---
 
-## Part 11 – What Did You Learn?
+## Part 11 – Key Learnings & Summary
 
 * **No "One-Size-Fits-All" Process:** Software engineering processes must be tailored to the system's specific domain, risk profile, and target audience.
 * **Safety & Regulation Drive Plan-Driven Processes:** Systems where errors risk patient safety or legal non-compliance rely on structured, documented phases.
