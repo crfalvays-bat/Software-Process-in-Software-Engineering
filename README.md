@@ -1,11 +1,16 @@
-# Software-Process-in-Software-Engineering
-Software Process in Software Engineering. Investigates core process activities, software process models (Waterfall, Incremental, Component Reuse, Agile), and real-world industrial practices comparing Netflix and NASA SLS. Includes technical documentation and presentation slides.
-
-# Software Process in Software Engineering
-
 **Course:** Software Engineering I  
 **Author:** Yino Alva
 **Instructor:** Dr. Victor Govindaswamy  
+
+---
+Youtube Videos:
+https://youtu.be/zG_2VjeATvY?si=o_Vs9oikju10-G0Z
+https://youtu.be/h9rMgdPAUWw?si=GdnY4hquEvIoOyUr
+https://youtu.be/JIROyfUgI2k?si=AnzQYFBKq8bIq9gh
+--- 
+
+# Software-Process-in-Software-Engineering
+Software Process in Software Engineering. Investigates core process activities, software process models (Waterfall, Incremental, Component Reuse, Agile), and real-world industrial practices comparing Netflix and NASA SLS. Includes technical documentation and presentation slides.
 
 ---
 
